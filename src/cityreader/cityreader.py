@@ -29,16 +29,16 @@ def cityreader(cities=[]):
   # todo Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list
-    with open('./cities.csv') as f:
+    with open('./src./cityreader./cities.csv') as f:
       csv_reader = csv.reader(f)
-    next(csv_reader)
-    for row in csv_reader:
-      c = City(row[0], float(row[3]), float(row[4]))
-      cities.append(c)
+      next(csv_reader)
+      for row in csv_reader: 
+        c = City(row[0], float(row[3]), float(row[4]))
+        cities.append(c)
     return cities
 
 cityreader(cities)
-
+#ref 13 file io
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
     print(c)
